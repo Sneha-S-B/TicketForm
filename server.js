@@ -13,11 +13,14 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/theftTracker", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
+// mongoose.connect("mongodb://localhost:27017/theftTracker", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+mongoose.connect("mongodb+srv://admin:passworD@cluster0.kcmpdt3.mongodb.net/theftTracker", {
+     useNewUrlParser: true,
+   useUnifiedTopology: true,
+   });
 // Schema and model
 const FaultSchema = new mongoose.Schema({
   siteid: String,
